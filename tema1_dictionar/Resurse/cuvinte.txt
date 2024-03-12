@@ -1,0 +1,24 @@
+Portocala
+Fructul portocalului, de formă sferică, aromat și zemos, bogat în vitamine, învelit într-o coajă de culoare galbenă-roșiatică.
+Fructe
+D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\portocala.png
+Mașină
+Vehicul cu motor, cu tracțiune proprie, destinat transportului de persoane sau de mărfuri.
+Transport
+D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\masina.png
+Câine
+Mamifer domestic, de talie mijlocie sau mare, cu blana variată, care se hrănește cu carne și care este folosit ca paznic, vânător sau animal de companie.
+Animale
+D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\caine.png
+Pisică
+Mamifer domestic, cu blana moale și variată, care se hrănește cu carne și care este folosit ca vânător de șoareci sau animal de companie.
+Animale
+D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\pisica.png
+Casă
+Clădire destinată locuirii oamenilor.
+Locuințe
+D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\casa.png
+Telefon
+Telecomunicație în care se realizează convorbiri la distanță prin mijlocirea undelor electromagnetice propagate de-a lungul unor fire; ansamblul instalațiilor necesare pentru acest scop.
+Electronice
+D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\telefon.png
