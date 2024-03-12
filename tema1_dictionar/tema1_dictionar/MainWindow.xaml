@@ -8,21 +8,6 @@
         Title="MainWindow" Height="604" Width="800"
         Background="DarkSlateGray">
 
-    <Window.Resources>
-        <!-- Define your style here -->
-        <Style x:Key="RoundCornerComboBoxStyle" TargetType="ComboBox">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ComboBox">
-                        <Border CornerRadius="10" BorderBrush="Black" BorderThickness="1" Background="{TemplateBinding Background}" Padding="5">
-                            <ContentPresenter />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -33,12 +18,6 @@
 
         <!-- Image for the dictionary -->
         <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\dictionary.png" Margin="701,6,15,440" Grid.RowSpan="2"/>
-
-        <!-- ComboBox for search -->
-        <!--
-        <ComboBox Style="{StaticResource RoundCornerComboBoxStyle}" Margin="154,217,0,0" Width="460" x:Name="searchComboBox" VerticalAlignment="Top" HorizontalAlignment="Left"
-                  Text="Cuvânt" SelectionChanged="searchComboBox_SelectionChanged" Grid.Row="1" Foreground="Gray" Height="25"/>-->
-
 
         <!-- Button for search -->
         <Button Grid.Row="1" Margin="609,217,0,0" Width="37" VerticalAlignment="Top" HorizontalAlignment="Left"

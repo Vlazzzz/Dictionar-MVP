@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Newtonsoft.Json;
 using System.Windows.Navigation;
 
 namespace tema1_dictionar
@@ -14,30 +12,29 @@ namespace tema1_dictionar
     public partial class MainWindow : Window
     {
         private List<Word> words;
+
+
         public MainWindow()
         {
             InitializeComponent();
+            InitializeWordsList();
+        }
 
-            // Initialize the list of words
-            Word portocala = new Word{ Text = "Portocala", Description = "Fructul portocalului, de formă sferică, aromat și zemos, bogat în vitamine, învelit într-o coajă de culoare galbenă-roșiatică.", Category = "Fructe", ImagePath = "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\portocala.png" };
-            Word masina = new Word { Text = "Mașină", Description = "Vehicul cu motor, cu tracțiune proprie, destinat transportului de persoane sau de mărfuri.", Category = "Transport", ImagePath = "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\masina.png" };
-            Word caine = new Word { Text = "Câine", Description = "Mamifer domestic, de talie mijlocie sau mare, cu blana variată, care se hrănește cu carne și care este folosit ca paznic, vânător sau animal de companie.", Category = "Animale", ImagePath = "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\caine.png" };
-            Word pisica = new Word { Text = "Pisică", Description = "Mamifer domestic, cu blana moale și variată, care se hrănește cu carne și care este folosit ca vânător de șoareci sau animal de companie.", Category = "Animale", ImagePath = "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\pisica.png" };
-            Word casa = new Word { Text = "Casă", Description = "Clădire destinată locuirii oamenilor.", Category = "Locuințe", ImagePath = "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\casa.png" };
-            Word telefon = new Word { Text = "Telefon",  Description = "Telecomunicație în care se realizează convorbiri la distanță prin mijlocirea undelor electromagnetice propagate de-a lungul unor fire; ansamblul instalațiilor necesare pentru acest scop.", Category = "Electronice", ImagePath = "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\telefon.png" };
+        private void InitializeWordsList()
+        {
+            string jsonFilePath = "D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\tema1_dictionar\\input\\word_list.json";
 
-            words = new List<Word> { portocala, masina, caine, pisica, casa, telefon };
-            // Write the words to a file
-            string path = "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\cuvinte.txt";
-            using (StreamWriter sw = File.CreateText(path))
+            if (File.Exists(jsonFilePath))
             {
-                foreach (Word word in words)
-                {
-                    sw.WriteLine(word.Text);
-                    sw.WriteLine(word.Description);
-                    sw.WriteLine(word.Category);
-                    sw.WriteLine(word.ImagePath);
-                }
+                // Read the JSON file
+                string jsonContent = File.ReadAllText(jsonFilePath);
+
+                // Deserialize JSON content into a list of Word objects
+                words = JsonConvert.DeserializeObject<List<Word>>(jsonContent);
+            }
+            else
+            {
+                MessageBox.Show("JSON file not found.");
             }
         }
 
@@ -64,7 +61,6 @@ namespace tema1_dictionar
                 // Clear the auto-complete suggestions
                 myComboBox.ItemsSource = null;
                 return;
-
             }
             // Filter words that start with the search text
             var matchedWords = words.Where(w => w.Text.ToLower().StartsWith(searchText)).Select(w => w.Text);
@@ -83,14 +79,6 @@ namespace tema1_dictionar
 
             if (selectedWord != null)
             {
-                // Create a new instance of WordDetailsWindow
-                //WordDetailsWindow wordDetailsWindow = new WordDetailsWindow();
-
-                // Set the properties of WordDetailsWindow to display the word's information
-                //wordDetailsWindow.SetWordDetails(selectedWord);
-
-                // Show the WordDetailsWindow
-                //wordDetailsWindow.Show();
                 // Display the word
                 wordNameBlock.Text = $"{selectedWord.Text}";
 
@@ -113,21 +101,6 @@ namespace tema1_dictionar
         private void ImageButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             // Handle the button click event here
-        }
-
-        public void SetWordDetails(Word word)
-        {
-            // Display the word
-            wordNameBlock.Text = $"{word.Text}";
-
-            // Display the category
-            wordDescriptionBlock.Text = $"Categorie: {word.Category}";
-
-            // Append the description to the wordTextBlock
-            wordDescriptionBlock.Text += $" - {word.Description}";
-
-            // Display the image
-           // wordImage.Source = new BitmapImage(new Uri(word.ImagePath));
         }
     }
 }
