@@ -11,6 +11,7 @@ namespace tema1_dictionar
 {
     public partial class MainWindow : Window
     {
+
         private List<Word> words;
 
 
@@ -101,6 +102,11 @@ namespace tema1_dictionar
         private void ImageButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             // Handle the button click event here
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
