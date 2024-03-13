@@ -41,12 +41,9 @@ namespace tema1_dictionar
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // Close the current window
-            //this.Close();
-
             // Open the MainWindow window
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            UserMainWindow userMainWindow = new UserMainWindow();
+            userMainWindow.Show();
             this.Close();
         }
 

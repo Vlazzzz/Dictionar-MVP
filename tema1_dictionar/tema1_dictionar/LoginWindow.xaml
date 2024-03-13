@@ -25,7 +25,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="Transparent" CornerRadius="10">
-                        <Image Source="D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\Resurse\\admin.png" Stretch="UniformToFill"/>
+                        <Image Source="D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\Resurse\\admin4.png" Stretch="UniformToFill"/>
                     </Border>
                 </ControlTemplate>
             </Button.Template>

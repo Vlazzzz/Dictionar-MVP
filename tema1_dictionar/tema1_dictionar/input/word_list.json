@@ -6,25 +6,25 @@
     "ImagePath": "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\portocala.png"
   },
   {
-    "Text": "Mașină",
+    "Text": "Masina",
     "Description": "Vehicul cu motor, cu tracțiune proprie, destinat transportului de persoane sau de mărfuri.",
     "Category": "Transport",
     "ImagePath": "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\masina.png"
   },
   {
-    "Text": "Câine",
+    "Text": "Caine",
     "Description": "Mamifer domestic, de talie mijlocie sau mare, cu blana variată, care se hrănește cu carne și care este folosit ca paznic, vânător sau animal de companie.",
     "Category": "Animale",
     "ImagePath": "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\caine.png"
   },
   {
-    "Text": "Pisică",
+    "Text": "Pisica",
     "Description": "Mamifer domestic, cu blana moale și variată, care se hrănește cu carne și care este folosit ca vânător de șoareci sau animal de companie.",
     "Category": "Animale",
     "ImagePath": "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\pisica.png"
   },
   {
-    "Text": "Casă",
+    "Text": "Casa",
     "Description": "Clădire destinată locuirii oamenilor.",
     "Category": "Cladire",
     "ImagePath": "D:\\facultate\\II\\SEM II\\MVP\\tema1_dictionar\\Resurse\\casa.png"

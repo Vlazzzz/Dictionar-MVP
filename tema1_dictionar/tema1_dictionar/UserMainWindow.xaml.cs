@@ -9,13 +9,13 @@ using System.Windows.Navigation;
 
 namespace tema1_dictionar
 {
-    public partial class MainWindow : Window
+    public partial class UserMainWindow : Window
     {
 
         private List<Word> words;
 
 
-        public MainWindow()
+        public UserMainWindow()
         {
             InitializeComponent();
             InitializeWordsList();
@@ -67,6 +67,7 @@ namespace tema1_dictionar
             var matchedWords = words.Where(w => w.Text.ToLower().StartsWith(searchText)).Select(w => w.Text);
             // Display matched words as auto-complete options
             myComboBox.ItemsSource = matchedWords;
+
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
@@ -103,5 +104,9 @@ namespace tema1_dictionar
             // Handle the button click event here
         }
 
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

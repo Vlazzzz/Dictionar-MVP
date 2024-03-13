@@ -1,11 +1,11 @@
-﻿<Window x:Class="tema1_dictionar.MainWindow"
+﻿<Window x:Class="tema1_dictionar.UserMainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tema1_dictionar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="604" Width="800"
+        Title="UserMainWindow" Height="604" Width="800"
         Background="DarkSlateGray">
 
     <Grid>
@@ -34,17 +34,12 @@
                 </Style>
             </ComboBox.Resources>
         </ComboBox>
-
         <TextBlock HorizontalAlignment="Left" x:Name="wordNameBlock" FontSize="20" FontFamily="bahnschrift" Foreground="WhiteSmoke" Margin="74,329,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" Height="38"/>
         <TextBlock HorizontalAlignment="Left" x:Name="wordDescriptionBlock" FontSize="16" FontFamily="bahnschrift" Foreground="WhiteSmoke" Margin="74,372,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="179"/>
         <Image x:Name="wordImageBlock" HorizontalAlignment="Left" Height="182" Margin="533,317,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="182"/>
         <!-- Other controls omitted for brevity -->
 
         <Frame x:Name="mainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
-        <Image x:Name="settingsLogoImage"  Source="D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\Resurse\\settings_icon.png" Height="54" Margin="701,394,46,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
-
-
-
 
     </Grid>
 </Window>
