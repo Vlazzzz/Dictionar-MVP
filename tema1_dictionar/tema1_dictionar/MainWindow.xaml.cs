@@ -14,7 +14,6 @@ namespace tema1_dictionar
 
         private List<Word> words;
 
-
         public MainWindow()
         {
             InitializeComponent();
