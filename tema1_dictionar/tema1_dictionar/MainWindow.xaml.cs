@@ -22,6 +22,23 @@ namespace tema1_dictionar
             InitializeWordsList();
         }
 
+        private void AddWordWindow_WordAdded(object sender, EventArgs e)
+        {
+            // Update the words list in the MainWindow
+            InitializeWordsList();
+        }
+        private void ModifyWordWindow_WordModified(object sender, EventArgs e)
+        {
+            // Update the words list in the MainWindow
+            InitializeWordsList();
+        }
+
+        private void RemoveWordWindow_WordRemoved(object sender, EventArgs e)
+        {
+            // Update the words list in the MainWindow
+            InitializeWordsList();
+        }
+
         private void InitializeWordsList()
         {
             string jsonFilePath = "D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\tema1_dictionar\\input\\word_list.json";
@@ -62,7 +79,6 @@ namespace tema1_dictionar
             }
         }
 
-
         private void ComboBox_KeyDown_searchWords(object sender, KeyEventArgs e)
         {
             if (searchByWord)
@@ -93,11 +109,6 @@ namespace tema1_dictionar
                 myComboBox.ItemsSource = categories;
             }
         }
-
-        //eu vreau ca atunci cand selectez butonul de categorie, auto_completul sa imi arate toate cuvintele din categoria respectiva
-        //dar daca selectez butonul de cuvant, sa imi arate toate cuvintele care se potrivesc cu ce am scris in casuta de cautare
-
-        //totodata, daca butonul de cautare este pe categorie, vreau ca autocomplete-ul sa mi arata categoriile ce dau match cu ce am scris eu
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
@@ -153,32 +164,24 @@ namespace tema1_dictionar
 
         private void AddWord_Click(object sender, RoutedEventArgs e)
         {
-            UserMainWindow userMainWindow = new UserMainWindow();
-            userMainWindow.Show(); 
-            this.Close();
+            AddWord addWordWindow = new AddWord();
+            addWordWindow.Show();
+            // Subscribe to the WordAdded event from the AddWord window
+            addWordWindow.WordAdded += AddWordWindow_WordAdded;
         }
 
         private void ModifyWord_Click(object sender, RoutedEventArgs e)
         {
-            UserMainWindow userMainWindow = new UserMainWindow();
-            userMainWindow.Show();
-            this.Close();
+            ModifyWord modifyWordWindow = new ModifyWord();
+            modifyWordWindow.Show();
+            modifyWordWindow.WordModified += ModifyWordWindow_WordModified;
         }
 
         private void RemoveWord_Click(object sender, RoutedEventArgs e)
         {
-            UserMainWindow userMainWindow = new UserMainWindow();
-            userMainWindow.Show();
-            this.Close();
-        }
-
-        private void ImageButton_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            // Handle the button click event here
-        }
-
-        private void SettingsButton_Click(object sender, RoutedEventArgs e)
-        {
+            RemoveWord removeWordWindow = new RemoveWord();
+            removeWordWindow.Show();
+            removeWordWindow.WordRemoved += RemoveWordWindow_WordRemoved;
 
         }
 
@@ -196,11 +199,6 @@ namespace tema1_dictionar
                 searchByWord = true;
                 searchFilter.Content = "Categorie";
             }
-        }
-
-        private void Button_Click4(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

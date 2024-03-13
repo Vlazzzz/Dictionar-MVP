@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tema1_dictionar"
         mc:Ignorable="d"
-        Title="AddWord" Height="450" Width="800">
+        Title="AddWord" Height="400" Width="800"
+        Background="DarkSlateGray">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Center" FontSize="50" Foreground="WhiteSmoke" FontFamily="Bahnschrift" Margin="0,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="384"><Run Language="ro-ro" Text="Adăugare cuvânt"/></TextBlock>
+        <TextBox x:Name="addWord" HorizontalAlignment="Center" Margin="0,110,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Cuvânt" VerticalAlignment="Top" Width="120" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="addCategory" HorizontalAlignment="Center" Margin="0,147,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Categorie" VerticalAlignment="Top" Width="120" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="addDescription" HorizontalAlignment="Center" Margin="0,192,0,0" Foreground="gray" TextWrapping="Wrap" Text="Descriere" VerticalAlignment="Top" Width="322" Height="47" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="addImage" HorizontalAlignment="Center" Margin="0,263,0,0" TextWrapping="Wrap" Text="D:\facultate\II\SEM II\MVP\Dictionar-MVP\tema1_dictionar\Resurse\no_image.png" VerticalAlignment="Top" Width="322"/>
+
+        <Button x:Name="AdminButton" Background="Transparent" HorizontalAlignment="Left" Margin="345,310,0,0" VerticalAlignment="Top" Height="54" Width="88" Click="Button_Click" RenderTransformOrigin="-0.491,1.544">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="Transparent" CornerRadius="10" Margin="42,11,0,0">
+                        <Image Source="D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\Resurse\\mark.png" Stretch="UniformToFill" Margin="-10,-13,10,13"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
     </Grid>
 </Window>

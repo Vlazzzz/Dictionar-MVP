@@ -1,0 +1,26 @@
+﻿<Window x:Class="tema1_dictionar.RemoveWord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tema1_dictionar"
+        mc:Ignorable="d"
+        Title="AddWord" Height="175" Width="420"
+        Background="DarkSlateGray">
+    <Grid Margin="0,0,0,-6">
+
+        <TextBlock HorizontalAlignment="Center" FontSize="36" Foreground="WhiteSmoke" FontFamily="Bahnschrift" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="266"><Run Language="ro-ro" Text="Ștergere cuvânt"/><LineBreak/><Run Language="ro-ro"/></TextBlock>
+
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="240,83,0,0" VerticalAlignment="Top" Height="46" Width="79" Click="CheckWord_Click" RenderTransformOrigin="-0.491,1.544">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="Transparent" CornerRadius="10" Margin="42,11,-3,-7">
+                        <Image Source="D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\Resurse\\mark.png" Stretch="UniformToFill" Margin="-9,-14,8,17"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBox x:Name="removeWordTextBox" HorizontalAlignment="Left" Margin="86,90,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Cuvânt" GotFocus="TextBox_GotFocus" VerticalAlignment="Top" Width="175" Height="21"/>
+
+    </Grid>
+</Window>

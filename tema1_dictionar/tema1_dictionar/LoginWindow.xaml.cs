@@ -9,9 +9,6 @@ using System.Windows.Navigation;
 
 namespace tema1_dictionar
 {
-    /// <summary>
-    /// Interaction logic for LoginWindow.xaml
-    /// </summary>
     public partial class LoginWindow : Window
     {
         public LoginWindow()
@@ -36,7 +33,7 @@ namespace tema1_dictionar
             }
             else
             {
-                MessageBox.Show("JSON file not found.");
+                MessageBox.Show("Fișierul JSON nu există.");
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -84,7 +81,7 @@ namespace tema1_dictionar
             }
             else
             {
-                MessageBox.Show("Invalid username or password. Please try again.");
+                MessageBox.Show("Username sau parolă invalidă. Încercați din nou.");
             }
         }
 
