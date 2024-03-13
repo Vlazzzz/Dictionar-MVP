@@ -53,7 +53,7 @@ namespace tema1_dictionar
             }
             else
             {
-                MessageBox.Show("JSON file not found.");
+                MessageBox.Show("Fișierul JSON nu s-a găsit.");
             }
         }
 
@@ -137,7 +137,7 @@ namespace tema1_dictionar
                 else
                 {
                     // Word not found, display a message or handle the case accordingly
-                    MessageBox.Show("Word not found.");
+                    MessageBox.Show("Cuvântul nu există.");
                 }
             }
             else
@@ -157,7 +157,7 @@ namespace tema1_dictionar
                 }
                 else
                 {
-                    MessageBox.Show("No words found in this category.");
+                    MessageBox.Show("Nu s-au găsit cuvinte în această categorie.");
                 }
             }
         }

@@ -40,7 +40,7 @@ namespace tema1_dictionar
             }
             else
             {
-                MessageBox.Show("JSON file not found.");
+                MessageBox.Show("Fișierul JSON nu există.");
                 Close(); // Close the window if JSON file is not found
             }
         }
