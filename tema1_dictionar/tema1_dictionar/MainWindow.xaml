@@ -10,24 +10,23 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="564.96"/>
+            <RowDefinition Height="602.92"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Margin="316,55,316,271" Grid.Row="1" FontSize="80" Foreground="WhiteSmoke" FontFamily="bahnschrift">DEX</TextBlock>
+        <TextBlock Margin="298,93,298,419" FontSize="100" Foreground="WhiteSmoke" FontFamily="bahnschrift">DEX</TextBlock>
 
         <!-- Image for the dictionary -->
-        <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\dictionary.png" Margin="701,6,15,440" Grid.RowSpan="2"/>
+        <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\dictionary.png" Margin="665,25,26,446" RenderTransformOrigin="0.228,0.492"/>
 
         <!-- Button for search -->
-        <Button Grid.Row="1" Margin="609,217,0,0" Width="37" VerticalAlignment="Top" HorizontalAlignment="Left"
+        <Button Margin="609,255,0,0" Width="37" VerticalAlignment="Top" HorizontalAlignment="Left"
                 Click="SearchButton_Click" Height="24" RenderTransformOrigin="0.606,1.491">
             <Button.Content>
                 <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\search_icon.png" RenderTransformOrigin="-2.454,0.803" Width="14" Height="14"/>
             </Button.Content>
         </Button>
 
-        <ComboBox x:Name="myComboBox" Margin="133,217,181,326" Grid.Row="1" IsEditable="True" Text="Cuvânt" GotFocus="ComboBox_GotFocus" KeyDown="ComboBox_KeyDown_searchWords">
+        <ComboBox x:Name="myComboBox" Margin="133,255,181,324" IsEditable="True" Text="Cuvânt" GotFocus="ComboBox_GotFocus" KeyDown="ComboBox_KeyDown_searchWords">
             <ComboBox.Resources>
                 <Style TargetType="TextBox">
                     <Setter Property="Foreground" Value="Gray"/>
@@ -35,27 +34,28 @@
             </ComboBox.Resources>
         </ComboBox>
 
-        <TextBlock HorizontalAlignment="Left" x:Name="wordNameBlock" FontSize="20" FontFamily="bahnschrift" Foreground="WhiteSmoke" Margin="74,329,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" Height="38"/>
-        <TextBlock HorizontalAlignment="Left" x:Name="wordDescriptionBlock" FontSize="16" FontFamily="bahnschrift" Foreground="WhiteSmoke" Margin="74,372,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="179"/>
-        <Image x:Name="wordImageBlock" HorizontalAlignment="Left" Height="182" Margin="533,317,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="182"/>
+        <TextBlock HorizontalAlignment="Left" x:Name="wordNameBlock" FontSize="20" FontFamily="bahnschrift" Foreground="WhiteSmoke" Margin="74,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" Height="38"/>
+        <TextBlock HorizontalAlignment="Left" x:Name="wordDescriptionBlock" FontSize="16" FontFamily="bahnschrift" Foreground="WhiteSmoke" Margin="74,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="179"/>
+        <Image x:Name="wordImageBlock" HorizontalAlignment="Left" Height="182" Margin="533,317,0,0" VerticalAlignment="Top" Width="182"/>
         <!-- Other controls omitted for brevity -->
 
-        <Button x:Name="searchFilter" Content="Categorie" HorizontalAlignment="Left" Margin="649,217,0,0" Grid.Row="1" VerticalAlignment="Top" Width="64" Click="Button_Click" Height="24"/>
-
-
+        <Button x:Name="searchFilter" Content="Categorie" HorizontalAlignment="Left" Margin="649,255,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click" Height="24"/>
 
 
         <!-- Button to activate the menu -->
-        <Button Content="Options" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
 
-        <!-- Menu for word operations -->
-        <Menu x:Name="wordMenu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10">
-            <MenuItem Header="Word Operations">
+        <Menu x:Name="wordMenu" HorizontalAlignment="Left" Background="Transparent" VerticalAlignment="Top" Width="90" Margin="40,40,0,0" Height="87">
+            <MenuItem Width="90" Height="87" Background="DarkSlateGray" FontFamily="bahnschrift">
+                <MenuItem.Icon>
+                    <Image Source="D:\facultate\II\SEM II\MVP\Dictionar-MVP\tema1_dictionar\Resurse\settings_icon.png" Margin="-2,-36,-72,-35" RenderTransformOrigin="0.71,0.518"/>
+                </MenuItem.Icon>
                 <MenuItem Header="Add Word" Click="AddWord_Click"/>
                 <MenuItem Header="Modify Word" Click="ModifyWord_Click"/>
                 <MenuItem Header="Remove Word" Click="RemoveWord_Click"/>
             </MenuItem>
         </Menu>
+
+
 
 
     </Grid>
