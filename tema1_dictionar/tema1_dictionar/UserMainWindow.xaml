@@ -13,20 +13,20 @@
             <RowDefinition Height="588.04"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Margin="298,53,298,436" FontSize="100" Foreground="WhiteSmoke" FontFamily="bahnschrift">DEX</TextBlock>
+        <TextBlock Margin="348,84,245,402" FontSize="100" Foreground="WhiteSmoke" FontFamily="bahnschrift">DEX</TextBlock>
 
         <!-- Image for the dictionary -->
-        <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\dictionary.png" Margin="665,25,26,446" RenderTransformOrigin="0.228,0.492"/>
+        <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\dictionary.png" Margin="239,80,452,391" RenderTransformOrigin="0.228,0.492"/>
 
         <!-- Button for search -->
-        <Button Margin="609,217,0,0" Width="37" VerticalAlignment="Top" HorizontalAlignment="Left"
+        <Button Margin="609,255,0,0" Width="37" VerticalAlignment="Top" HorizontalAlignment="Left"
                 Click="SearchButton_Click" Height="24" RenderTransformOrigin="0.606,1.491">
             <Button.Content>
                 <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\search_icon.png" RenderTransformOrigin="-2.454,0.803" Width="14" Height="14"/>
             </Button.Content>
         </Button>
 
-        <ComboBox x:Name="myComboBox" Margin="133,217,181,347" IsEditable="True" Text="Cuvânt" GotFocus="ComboBox_GotFocus" KeyDown="ComboBox_KeyDown_searchWords" >
+        <ComboBox x:Name="myComboBox" Margin="133,255,181,309" IsEditable="True" Text="Cuvânt" GotFocus="ComboBox_GotFocus" KeyDown="ComboBox_KeyDown_searchWords">
             <ComboBox.Resources>
                 <Style TargetType="TextBox">
                     <Setter Property="Foreground" Value="Gray"/>
@@ -37,7 +37,11 @@
         <TextBlock HorizontalAlignment="Left" x:Name="wordDescriptionBlock" FontSize="16" FontFamily="bahnschrift" Foreground="WhiteSmoke" Margin="74,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="179"/>
         <Image x:Name="wordImageBlock" HorizontalAlignment="Left" Height="182" Margin="533,317,0,0" VerticalAlignment="Top" Width="182"/>
         <!-- Other controls omitted for brevity -->
-        <Button x:Name="searchFilter" Content="Categorie" HorizontalAlignment="Left" Margin="649,217,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click" Height="24"/>
+        <Button x:Name="searchFilter" Content="Categorie" HorizontalAlignment="Left" Margin="649,255,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click" Height="24"/>
+
+        <Button Content="Play!" HorizontalAlignment="Left" Margin="672,163,0,0" VerticalAlignment="Top" Height="20" Width="41" Click="Button_Click_1"/>
+        <Image Source="D:\facultate\II\SEM II\MVP\Dictionar-MVP\tema1_dictionar\Resurse\game.png"  HorizontalAlignment="Left" Height="124" Margin="628,22,0,0" VerticalAlignment="Top" Width="128"/>
+
 
     </Grid>
 </Window>

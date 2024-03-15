@@ -158,5 +158,12 @@ namespace tema1_dictionar
                 searchFilter.Content = "Categorie";
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //navigate to the game window
+            Game gameWindow = new Game();
+            gameWindow.Show();
+        }
     }
 }

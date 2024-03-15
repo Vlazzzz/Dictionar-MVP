@@ -84,6 +84,5 @@ namespace tema1_dictionar
                 MessageBox.Show("Username sau parolă invalidă. Încercați din nou.");
             }
         }
-
     }
 }

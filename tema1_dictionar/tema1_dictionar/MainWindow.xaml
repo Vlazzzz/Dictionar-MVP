@@ -8,15 +8,15 @@
         Title="MainWindow" Height="604" Width="800"
         Background="DarkSlateGray">
 
-    <Grid>
+    <Grid Margin="0,0,0,1">
         <Grid.RowDefinitions>
             <RowDefinition Height="602.92"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Margin="298,93,298,419" FontSize="100" Foreground="WhiteSmoke" FontFamily="bahnschrift">DEX</TextBlock>
+        <TextBlock Margin="348,94,248,418" FontSize="100" Foreground="WhiteSmoke" FontFamily="bahnschrift">DEX</TextBlock>
 
         <!-- Image for the dictionary -->
-        <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\dictionary.png" Margin="665,25,26,446" RenderTransformOrigin="0.228,0.492"/>
+        <Image Source="D:\facultate\II\SEM II\MVP\tema1_dictionar\Resurse\dictionary.png" Margin="237,83,457,392" RenderTransformOrigin="0.228,0.492"/>
 
         <!-- Button for search -->
         <Button Margin="609,255,0,0" Width="37" VerticalAlignment="Top" HorizontalAlignment="Left"
@@ -55,7 +55,8 @@
             </MenuItem>
         </Menu>
 
-
+        <Button Content="Play!" HorizontalAlignment="Left" Margin="672,163,0,0" VerticalAlignment="Top" Height="20" Width="41" Click="Button_Click_1"/>
+        <Image Source="D:\facultate\II\SEM II\MVP\Dictionar-MVP\tema1_dictionar\Resurse\game.png"  HorizontalAlignment="Left" Height="124" Margin="628,22,0,0" VerticalAlignment="Top" Width="128"/>
 
 
     </Grid>

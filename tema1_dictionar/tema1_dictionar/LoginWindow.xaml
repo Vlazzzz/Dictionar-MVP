@@ -9,9 +9,7 @@
         Background="DarkSlateGray">
     <Grid>
 
-        <Frame x:Name="LoginFrame" NavigationUIVisibility="Hidden"/>
-
-        <Button Background="Transparent" HorizontalAlignment="Left" Margin="400,152,0,0" VerticalAlignment="Top" Height="129" Width="127" Click="Button_Click" RenderTransformOrigin="-0.491,1.544">
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="366,175,0,0" VerticalAlignment="Top" Height="129" Width="127" Click="Button_Click" RenderTransformOrigin="-0.491,1.544">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="Transparent" CornerRadius="10">
@@ -21,7 +19,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="AdminButton" Background="Transparent" HorizontalAlignment="Left" Margin="485,335,0,0" VerticalAlignment="Top" Height="141" Width="139" Click="Button_Click2" RenderTransformOrigin="-0.491,1.544">
+        <Button x:Name="AdminButton" Background="Transparent" HorizontalAlignment="Left" Margin="485,348,0,0" VerticalAlignment="Top" Height="141" Width="139" Click="Button_Click2" RenderTransformOrigin="-0.491,1.544">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="Transparent" CornerRadius="10">
@@ -34,10 +32,10 @@
 
 
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,39,0,0" TextWrapping="Wrap" Text="Login Page" VerticalAlignment="Top" Width="228" FontFamily="Bahnschrift" FontSize="44" Foreground="White" RenderTransformOrigin="0.505,0.19"/>
-        <TextBox x:Name="userBox" HorizontalAlignment="Left" Height="22" Margin="192,376,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="260" GotFocus="TextBox_GotFocus"/>
-        <TextBox x:Name="passBox" HorizontalAlignment="Left" Height="22" Margin="192,420,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="260" GotFocus="TextBox_GotFocus"/>
-        <TextBlock HorizontalAlignment="Left" Margin="322,203,0,0" TextWrapping="Wrap" Text="USER" VerticalAlignment="Top" Width="65" FontFamily="Bahnschrift" FontSize="22" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="284,335,0,0" TextWrapping="Wrap" Text="ADMIN" VerticalAlignment="Top" Width="70" FontFamily="Bahnschrift" FontSize="22" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="284,39,0,0" TextWrapping="Wrap" Text="Login Page" VerticalAlignment="Top" Width="228" FontFamily="Bahnschrift" FontSize="44" Foreground="White" RenderTransformOrigin="0.505,0.19"/>
+        <TextBox x:Name="userBox" HorizontalAlignment="Left" Height="22" Margin="192,389,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="260" GotFocus="TextBox_GotFocus"/>
+        <TextBox x:Name="passBox" HorizontalAlignment="Left" Height="22" Margin="192,433,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="260" GotFocus="TextBox_GotFocus"/>
+        <TextBlock HorizontalAlignment="Left" Margin="288,226,0,0" TextWrapping="Wrap" Text="USER" VerticalAlignment="Top" Width="65" FontFamily="Bahnschrift" FontSize="22" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="284,348,0,0" TextWrapping="Wrap" Text="ADMIN" VerticalAlignment="Top" Width="70" FontFamily="Bahnschrift" FontSize="22" Foreground="White"/>
     </Grid>
 </Window>
