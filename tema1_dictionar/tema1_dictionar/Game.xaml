@@ -16,6 +16,7 @@
         <TextBox x:Name="wordInsert" HorizontalAlignment="Left" Margin="198,82,0,0" FontSize="14" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="22"/>
         <Button x:Name="checkWord" FontSize="15" Content="?" HorizontalAlignment="Left" Margin="332,82,0,0" VerticalAlignment="Top" Height="22" Width="24" Click="checkWord_Click_1" RenderTransformOrigin="-0.146,0.531"/>
         <Button x:Name="nextRoundButton" Content="Next Round" HorizontalAlignment="Left" Margin="452,200,0,0" VerticalAlignment="Top" Width="74" Click="NextRoundButton_Click" Height="19"/>
+        <TextBlock x:Name="correctWord" FontFamily="Bahnschrift" FontSize="14" HorizontalAlignment="Left" Margin="34,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="42"/>
 
     </Grid>
 </Window>

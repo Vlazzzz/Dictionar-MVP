@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
@@ -16,6 +17,8 @@ namespace tema1_dictionar
         private int currentRound;
         private bool isDescriptionHint;
         private int _correctCounter = 0;
+
+        private Word correct_word;
 
         public Game()
         {
@@ -51,6 +54,7 @@ namespace tema1_dictionar
             } while (pickedWords.Contains(selectedWord) || (!isDescriptionHint && selectedWord.ImagePath == "D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\Resurse\\no_image.png"));
 
             pickedWords.Add(selectedWord); // Add the selected word to pickedWords
+            correct_word = selectedWord;
 
             // Set hint based on isDescriptionHint
             if (isDescriptionHint)
@@ -94,6 +98,8 @@ namespace tema1_dictionar
             {
                 // Word guessed incorrectly
                 verifyImage.Source = new BitmapImage(new Uri("D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\Resurse\\red_mark.png"));
+                correctWord.Foreground = Brushes.Red;
+                correctWord.Text = $"Cuvântul corect este: {correct_word.Text}";
             }
             checkWord.IsEnabled = false;
             //daca este ultima runda
@@ -115,6 +121,7 @@ namespace tema1_dictionar
 
         private void NextRoundButton_Click(object sender, RoutedEventArgs e)
         {
+            correctWord.Text = null;
             string guessedWord = wordInsert.Text.Trim();
             if (guessedWord == "")
             {
