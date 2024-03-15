@@ -11,35 +11,12 @@ namespace tema1_dictionar
 {
     public partial class RemoveWord : Window
     {
-        // Define event
-        public event WordAddedEventHandler WordRemoved;
         private List<Word> words;
-
-        public delegate void WordAddedEventHandler(object sender, EventArgs e);
 
         public RemoveWord()
         {
             InitializeComponent();
-            InitializeWordsList();
-        }
-
-        private void InitializeWordsList()
-        {
-            string jsonFilePath = "D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\tema1_dictionar\\input\\word_list.json";
-
-            if (File.Exists(jsonFilePath))
-            {
-                // Read the JSON file
-                string jsonContent = File.ReadAllText(jsonFilePath);
-
-                // Deserialize JSON content into a list of Word objects
-                words = JsonConvert.DeserializeObject<List<Word>>(jsonContent);
-            }
-            else
-            {
-                MessageBox.Show("Fișierul JSON nu există.");
-                Close(); // Close the window if JSON file is not found
-            }
+            words = WordManager.Instance.Words;
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -63,8 +40,6 @@ namespace tema1_dictionar
                 // Save the modified list of words to the JSON file
                 SaveWordsToJsonFile();
 
-                OnWordRemoved(EventArgs.Empty);
-
                 MessageBox.Show("Cuvânt șters cu succes.");
             }
             else
@@ -82,12 +57,6 @@ namespace tema1_dictionar
 
             // Write the JSON content to the file
             File.WriteAllText(jsonFilePath, jsonContent);
-        }
-
-        protected virtual void OnWordRemoved(EventArgs e)
-        {
-            // Raise the event
-            WordRemoved?.Invoke(this, e);
         }
     }
 }

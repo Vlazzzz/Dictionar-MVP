@@ -12,37 +12,13 @@ namespace tema1_dictionar
 {
     public partial class ModifyWord : Window
     {
-
         private Word selectedWord;
-
-        // Define event
-        public event WordAddedEventHandler WordModified;
         private List<Word> words;
 
-        public delegate void WordAddedEventHandler(object sender, EventArgs e);
         public ModifyWord()
         {
             InitializeComponent();
-            InitializeWordsList();
-        }
-
-        private void InitializeWordsList()
-        {
-            string jsonFilePath = "D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\tema1_dictionar\\input\\word_list.json";
-
-            if (File.Exists(jsonFilePath))
-            {
-                // Read the JSON file
-                string jsonContent = File.ReadAllText(jsonFilePath);
-
-                // Deserialize JSON content into a list of Word objects
-                words = JsonConvert.DeserializeObject<List<Word>>(jsonContent);
-            }
-            else
-            {
-                MessageBox.Show("Fișierul JSON nu există.");
-                Close(); // Close the window if JSON file is not found
-            }
+            words = WordManager.Instance.Words;
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -106,13 +82,6 @@ namespace tema1_dictionar
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ModifyWords();
-            OnWordModified(EventArgs.Empty);
-        }
-
-        protected virtual void OnWordModified(EventArgs e)
-        {
-            // Raise the event
-            WordModified?.Invoke(this, e);
         }
 
         private void CheckWord_Click(object sender, RoutedEventArgs e)
@@ -135,6 +104,5 @@ namespace tema1_dictionar
                 MessageBox.Show("Cuvântul dat nu există în listă.");
             }
         }
-
     }
 }

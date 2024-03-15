@@ -11,50 +11,13 @@ namespace tema1_dictionar
 {
     public partial class MainWindow : Window
     {
-
         private List<Word> words;
         private bool searchByWord = true;
-
 
         public MainWindow()
         {
             InitializeComponent();
-            InitializeWordsList();
-        }
-
-        private void AddWordWindow_WordAdded(object sender, EventArgs e)
-        {
-            // Update the words list in the MainWindow
-            InitializeWordsList();
-        }
-        private void ModifyWordWindow_WordModified(object sender, EventArgs e)
-        {
-            // Update the words list in the MainWindow
-            InitializeWordsList();
-        }
-
-        private void RemoveWordWindow_WordRemoved(object sender, EventArgs e)
-        {
-            // Update the words list in the MainWindow
-            InitializeWordsList();
-        }
-
-        private void InitializeWordsList()
-        {
-            string jsonFilePath = "D:\\facultate\\II\\SEM II\\MVP\\Dictionar-MVP\\tema1_dictionar\\tema1_dictionar\\input\\word_list.json";
-
-            if (File.Exists(jsonFilePath))
-            {
-                // Read the JSON file
-                string jsonContent = File.ReadAllText(jsonFilePath);
-
-                // Deserialize JSON content into a list of Word objects
-                words = JsonConvert.DeserializeObject<List<Word>>(jsonContent);
-            }
-            else
-            {
-                MessageBox.Show("Fișierul JSON nu s-a găsit.");
-            }
+            words = WordManager.Instance.Words;
         }
 
         private void ComboBox_GotFocus(object sender, RoutedEventArgs e)
@@ -166,23 +129,18 @@ namespace tema1_dictionar
         {
             AddWord addWordWindow = new AddWord();
             addWordWindow.Show();
-            // Subscribe to the WordAdded event from the AddWord window
-            addWordWindow.WordAdded += AddWordWindow_WordAdded;
         }
 
         private void ModifyWord_Click(object sender, RoutedEventArgs e)
         {
             ModifyWord modifyWordWindow = new ModifyWord();
             modifyWordWindow.Show();
-            modifyWordWindow.WordModified += ModifyWordWindow_WordModified;
         }
 
         private void RemoveWord_Click(object sender, RoutedEventArgs e)
         {
             RemoveWord removeWordWindow = new RemoveWord();
             removeWordWindow.Show();
-            removeWordWindow.WordRemoved += RemoveWordWindow_WordRemoved;
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
