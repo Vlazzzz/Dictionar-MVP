@@ -20,6 +20,10 @@ namespace tema1_dictionar
         {
             InitializeComponent();
             InitializeWordsList();
+            if (!searchByWord)
+            {
+                myComboBox.ItemsSource = words.Select(w => w.Category);
+            }
         }
 
         private void InitializeWordsList()
@@ -65,7 +69,7 @@ namespace tema1_dictionar
 
         private void ComboBox_KeyDown_searchWords(object sender, KeyEventArgs e)
         {
-            if(searchByWord)
+            if (searchByWord)
             {
                 myComboBox.IsDropDownOpen = true;
 
@@ -84,13 +88,6 @@ namespace tema1_dictionar
                 var matchedWords = words.Where(w => w.Text.ToLower().StartsWith(searchText)).Select(w => w.Text);
                 // Display matched words as auto-complete options
                 myComboBox.ItemsSource = matchedWords;
-            }
-            else
-            {
-                myComboBox.IsDropDownOpen = true;
-                //Retrieve all the categories from the list of words
-                var categories = words.Select(w => w.Category).Distinct();
-                myComboBox.ItemsSource = categories;
             }
         }
 
