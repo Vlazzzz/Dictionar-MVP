@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Interop;
 using System.Windows.Media;
 using Newtonsoft.Json;
 
@@ -12,11 +13,16 @@ namespace tema1_dictionar
     public partial class AddWord : Window
     {
         private List<Word> words;
+        private List<string> categories;
 
         public AddWord()
         {
             InitializeComponent();
             words = WordManager.Instance.Words;
+
+            // Initialize and populate the categories list
+            categories = words.Select(w => w.Category).Distinct().ToList();
+            addCategory.ItemsSource = categories;
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -50,7 +56,7 @@ namespace tema1_dictionar
             }
 
             // Add the new word to the list
-            words.Add(new Word { Text = newWordText, Category = newCategory, Description = newDescription, ImagePath = newImagePath});
+            words.Add(new Word { Text = newWordText, Category = newCategory, Description = newDescription, ImagePath = newImagePath });
 
             // Serialize the updated list of words to JSON format
             string jsonContent = JsonConvert.SerializeObject(words, Formatting.Indented);
@@ -64,6 +70,16 @@ namespace tema1_dictionar
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddWordToList();
+        }
+
+        private void AddCategory_OnGotFocus(object sender, RoutedEventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+            if (comboBox.Text == "Categorie")
+            {
+                comboBox.Text = string.Empty;
+                comboBox.Foreground = Brushes.Black; // Change the text color to black
+            }
         }
     }
 }

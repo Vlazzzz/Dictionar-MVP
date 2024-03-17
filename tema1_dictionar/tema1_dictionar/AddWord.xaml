@@ -10,7 +10,6 @@
     <Grid>
         <TextBlock HorizontalAlignment="Center" FontSize="50" Foreground="WhiteSmoke" FontFamily="Bahnschrift" Margin="0,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="384"><Run Language="ro-ro" Text="Adăugare cuvânt"/></TextBlock>
         <TextBox x:Name="addWord" HorizontalAlignment="Center" Margin="0,110,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Cuvânt" VerticalAlignment="Top" Width="120" GotFocus="TextBox_GotFocus"/>
-        <TextBox x:Name="addCategory" HorizontalAlignment="Center" Margin="0,147,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Categorie" VerticalAlignment="Top" Width="120" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="addDescription" HorizontalAlignment="Center" Margin="0,192,0,0" Foreground="gray" TextWrapping="Wrap" Text="Descriere" VerticalAlignment="Top" Width="322" Height="47" GotFocus="TextBox_GotFocus"/>
         <TextBox x:Name="addImage" HorizontalAlignment="Center" Margin="0,263,0,0" TextWrapping="Wrap" Text="D:\facultate\II\SEM II\MVP\Dictionar-MVP\tema1_dictionar\Resurse\no_image.png" VerticalAlignment="Top" Width="322"/>
 
@@ -23,6 +22,9 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+
+        <ComboBox x:Name="addCategory" GotFocus="AddCategory_OnGotFocus" HorizontalAlignment="Center" IsEditable="True" Margin="0,147,0,0" VerticalAlignment="Top" Width="120" ItemsSource=""/>
+
 
     </Grid>
 </Window>

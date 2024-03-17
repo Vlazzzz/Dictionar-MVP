@@ -7,6 +7,8 @@ using System.Windows.Media.Imaging;
 using Newtonsoft.Json;
 using System.Windows.Navigation;
 
+//de uitat peste autoComplete
+
 namespace tema1_dictionar
 {
     public partial class MainWindow : Window
