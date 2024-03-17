@@ -54,6 +54,17 @@ namespace tema1_dictionar
             }
         }
 
+        private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            PasswordBox passwordBox = (PasswordBox)sender;
+            if (passwordBox.Password == "Password")
+            {
+                passwordBox.Clear();
+                passwordBox.Foreground = Brushes.Black; // Change the text color to black
+            }
+        }
+
+
         private bool ValidateAdmin(string username, string password)
         {
             foreach (Admin admin in admins)
@@ -69,7 +80,7 @@ namespace tema1_dictionar
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
             string username = userBox.Text;
-            string password = passBox.Text;
+            string password = passBox.Password;
 
             if (ValidateAdmin(username, password))
             {

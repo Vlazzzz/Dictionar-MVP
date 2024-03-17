@@ -11,12 +11,13 @@
         <TextBlock HorizontalAlignment="Left" Margin="162,21,0,0" FontSize="28" Foreground="WhiteSmoke" FontFamily="Bahnschrift" TextWrapping="Wrap" Text="Ghicește cuvântul!" VerticalAlignment="Top" Height="31" Width="232"/>
         <TextBlock x:Name="round" HorizontalAlignment="Left" Margin="10,182,0,0" FontSize="26" Foreground="WhiteSmoke" FontFamily="Bahnschrift" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="47"><Run Text="1/"/><Run Language="ro-ro" Text="5"/></TextBlock>
         <TextBlock x:Name="wordDescription" HorizontalAlignment="Left" Margin="76,141,0,0" FontSize="16" Foreground="WhiteSmoke" FontFamily="Bahnschrift" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-6.81,-1.788" Height="125" Width="355"><Run Language="ro-ro" Text="D"/><Run Text="escriere"/><Run Language="ro-ro" Text=" cuvânt"/><LineBreak/><Run Language="ro-ro"/><LineBreak/><Run/></TextBlock>
-        <Image x:Name="wordImage" HorizontalAlignment="Left" Height="103" Margin="219,141,0,0" VerticalAlignment="Top" Width="103"/>
-        <Image x:Name="verifyImage" HorizontalAlignment="Left" Height="54" Margin="462,127,0,0" VerticalAlignment="Top" Width="54"/>
+        <Image x:Name="wordImage" HorizontalAlignment="Left" Height="122" Margin="206,128,0,0" VerticalAlignment="Top" Width="132"/>
+        <Image x:Name="verifyImage" HorizontalAlignment="Left" Height="68" Margin="448,132,0,0" VerticalAlignment="Top" Width="68"/>
         <TextBox x:Name="wordInsert" HorizontalAlignment="Left" Margin="198,82,0,0" FontSize="14" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="22"/>
-        <Button x:Name="checkWord" FontSize="15" Content="?" HorizontalAlignment="Left" Margin="332,82,0,0" VerticalAlignment="Top" Height="22" Width="24" Click="checkWord_Click_1" RenderTransformOrigin="-0.146,0.531"/>
-        <Button x:Name="nextRoundButton" Content="Next Round" HorizontalAlignment="Left" Margin="452,200,0,0" VerticalAlignment="Top" Width="74" Click="NextRoundButton_Click" Height="19"/>
+        <Button x:Name="checkWord" FontSize="15" HorizontalAlignment="Left" Margin="332,82,0,0" VerticalAlignment="Top" Height="22" Width="24" Click="checkWord_Click_1" RenderTransformOrigin="-0.146,0.531">
+            <Image Source="D:\facultate\II\SEM II\MVP\Dictionar-MVP\tema1_dictionar\Resurse\question_mark2.png" Width="13" Height="13"/>
+        </Button>
+        <Button x:Name="nextRoundButton" Content="Next" Foreground="DarkSlateGray" FontFamily="Bahnschrift" FontSize="16" HorizontalAlignment="Left" Margin="448,224,0,0" VerticalAlignment="Top" Width="67" Click="NextRoundButton_Click" Height="23"/>
         <TextBlock x:Name="correctWord" FontFamily="Bahnschrift" FontSize="16" HorizontalAlignment="Left" Margin="27,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="42"/>
-
     </Grid>
 </Window>

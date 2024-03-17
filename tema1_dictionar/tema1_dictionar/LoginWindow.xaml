@@ -34,7 +34,9 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="284,39,0,0" TextWrapping="Wrap" Text="Login Page" VerticalAlignment="Top" Width="228" FontFamily="Bahnschrift" FontSize="44" Foreground="White" RenderTransformOrigin="0.505,0.19"/>
         <TextBox x:Name="userBox" HorizontalAlignment="Left" Height="22" Margin="192,389,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="260" GotFocus="TextBox_GotFocus"/>
-        <TextBox x:Name="passBox" HorizontalAlignment="Left" Height="22" Margin="192,433,0,0" Foreground="Gray" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="260" GotFocus="TextBox_GotFocus"/>
+        <PasswordBox x:Name="passBox" HorizontalAlignment="Left" Height="22" Margin="192,433,0,0" Foreground="Gray" VerticalAlignment="Top" Width="260" Password="Password" GotFocus="PasswordBox_GotFocus"/>
+
+
         <TextBlock HorizontalAlignment="Left" Margin="288,226,0,0" TextWrapping="Wrap" Text="USER" VerticalAlignment="Top" Width="65" FontFamily="Bahnschrift" FontSize="22" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="284,348,0,0" TextWrapping="Wrap" Text="ADMIN" VerticalAlignment="Top" Width="70" FontFamily="Bahnschrift" FontSize="22" Foreground="White"/>
     </Grid>

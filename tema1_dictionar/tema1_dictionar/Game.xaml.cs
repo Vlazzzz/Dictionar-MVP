@@ -112,7 +112,8 @@ namespace tema1_dictionar
                 {
                     timer.Stop();
                     // Game over
-                    MessageBox.Show($"Jocul s-a terminat!\nAți avut {_correctCounter}/5 răspunsuri corecte.");
+                    MessageBox.Show($"Jocul s-a terminat!\n" +
+                                    $"Felicitări! Ați avut {_correctCounter}/5 răspunsuri corecte.");
                     this.Close();
                 };
                 timer.Start();
